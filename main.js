@@ -41,12 +41,14 @@ function tarjetaNovalida() {
 //function
 function tarjetaValida() {
 
-    if (creditCardName.value != "american" && creditCardName.value != "visa" && creditCardName.value != "master") {
+    if (creditCardName.value != "american" && creditCardName.value != "americanexpress" &&
+        creditCardName.value != "visa" && creditCardName.value != "master"
+        && creditCardName.value != "mastercard") {
         alert("solo se acepta VISA,MASTER Y AMERICAN")
         document.getElementById('form_Tarjeta').reset();
     }
 
-    if (creditCardName.value === "american") {
+    if (creditCardName.value === "american" || creditCardName.value === "americanexpress") {
         console.warn("Tarjeta AmericanExpress")
         console.log("American express en 1 pago no tiene interes")
 
